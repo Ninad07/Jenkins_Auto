@@ -1,0 +1,15 @@
+Hello Learners
+This is a project based on complete automation of website deployment using Jenkins, Git and Docker
+It is used to automate a complete website hosting process using Jenkins.
+For that purpose I have created two jobs- Prod_Deployment and Site_Testing in Jenkins
+
+It has the following workflow:
+1. The developer creates a webpage and uploads the code on GitHub
+2. As soon as the developer commits the code, a post-commit webhook is triggered
+3. This starts the Site_Testing Job. This jobs creates a tesing environment using Docker containers. The uploaded code of the webpage
+   is first tested in the testin environment. 
+4. If the code works properly, the second job Prod_deployment is triggered.
+5. This job then uses the same code and deploys it.
+6. If the Site_Testing job fails, Prod_deployment job does not start.
+
+Usage steps are provided in the "instructions" file
